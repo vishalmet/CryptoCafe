@@ -1,43 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Navbar from '../components/Navbar';
+import Form from '../components/Form'
+import Display from '../components/Display';
 
 
 
 function Home() {
-  const [name, setName] = useState('');
-  const [message, setMessage] = useState('');
-
-  const handleNameChange = (event) => {
-    setName(event.target.value);
-  };
-
-  const handleMessageChange = (event) => {
-    setMessage(event.target.value);
-  };
-
-  const handleBuyClick = () => {
-    console.log(`Name: ${name}, Message: ${message}`);
-    setName('');
-    setMessage('');
-  };
-
-  
-  
-
+   
   return (
-    <div>
+    <div className='bg-gradient-to-r from-gray-100 to-gray-300 h-screen w-full'>
         <Navbar />
-      <label>
-        Name:
-        <input type="text" value={name} onChange={handleNameChange} />
-      </label>
-      <br />
-      <label>
-        Message:
-        <input type="text" value={message} onChange={handleMessageChange} />
-      </label>
-      <br />
-      <button onClick={handleBuyClick}>Buy</button>
+        <Form />
+        <Display />
     </div>
   );
 }

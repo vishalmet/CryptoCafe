@@ -1,5 +1,5 @@
 {
-  "name": "cafe3",
+  "name": "dapp",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,14 +8,15 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "ethers": "^5.7.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
-    "tailwindcss": "^3.4.1",
-    "viem": "^2.8.11",
-    "wagmi": "^2.5.11",
-    "web-vitals": "^2.1.4"
+    "viem": "^2.8.10",
+    "wagmi": "^2.5.7",
+    "web-vitals": "^2.1.4",
+    "web3": "^4.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -40,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
   }
 }

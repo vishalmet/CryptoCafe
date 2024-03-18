@@ -1,8 +1,12 @@
-import React from 'react'
-import '@rainbow-me/rainbowkit/styles.css';
+import React from "react";
+import "@rainbow-me/rainbowkit/styles.css";
 
-import {ConnectButton,getDefaultConfig,RainbowKitProvider} from '@rainbow-me/rainbowkit';
-import { WagmiProvider } from 'wagmi';
+import {
+  ConnectButton,
+  getDefaultConfig,
+  RainbowKitProvider,
+} from "@rainbow-me/rainbowkit";
+import { WagmiProvider } from "wagmi";
 import {
   mainnet,
   polygon,
@@ -11,37 +15,35 @@ import {
   base,
   zora,
   polygonMumbai,
-  sepolia
-} from 'wagmi/chains';
-import {
-  QueryClientProvider,
-  QueryClient,
-} from "@tanstack/react-query";
+  sepolia,
+} from "wagmi/chains";
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 
 const config = getDefaultConfig({
-  appName: 'My RainbowKit App',
-  projectId: 'YOUR_PROJECT_ID',
-  chains: [polygonMumbai,sepolia],
+  appName: "My RainbowKit App",
+  projectId: "YOUR_PROJECT_ID",
+  chains: [polygonMumbai, sepolia],
   ssr: true, // If your dApp uses server side rendering (SSR)
 });
 const queryClient = new QueryClient();
 
-
 const Button = () => {
   return (
     <WagmiProvider config={config}>
-    <QueryClientProvider client={queryClient}>
-      <RainbowKitProvider >
-      <div className='flex justify-between px-6 py-3 bg-pink-100'>
-        <h1 className='text-2xl lg:text-3xl font-semibold'>Buy Coffee..</h1>
-        <div>
-         <ConnectButton />
-        </div>
-      </div>
+      <QueryClientProvider client={queryClient}>
+        <RainbowKitProvider>
+          <div className=" flex px-6 py-3 bg-gradient-to-r from-gray-100 to-gray-300 font-mono shadow-2xl w-full">
+            <h1 className="text-2xl lg:text-3xl font-semibold flex-1 ">
+              CryptoCafe
+            </h1>
+            <div className="">
+              <ConnectButton />
+            </div>
+          </div>
         </RainbowKitProvider>
       </QueryClientProvider>
     </WagmiProvider>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;
