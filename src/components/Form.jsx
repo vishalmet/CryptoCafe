@@ -63,7 +63,7 @@ const Form = () => {
             className="px-6 py-1 bg-white hover:bg-black hover:text-white border-black hover:border-white border-2 shadow-2xl rounded-xl font-bold "
             onClick={handleBuyClick}
           >
-            Buy
+            Send
           </button>
         </div>
       </div>
